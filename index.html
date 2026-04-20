@@ -1,15 +1,108 @@
-<link rel="stylesheet" href="dc3-estilo-oficial.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formato DC-3</title>
 
-<div class="header">
-    <img src="logo.png" class="logo">
-    <h1>FORMATO DC-3</h1>
-    <h2>CONSTANCIA DE COMPETENCIAS O HABILIDADES LABORALES</h2>
-</div>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    font-size: 13px;
+    position: relative;
+}
 
+/* Marca de agua */
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+    z-index: -1;
+    width: 400px;
+}
+
+/* Encabezado con logo */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.section {
+    margin-top: 15px;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.col {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    border-bottom: 1px solid #000;
+    padding-left: 5px;
+}
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.sign-box {
+    width: 30%;
+}
+
+.line {
+    border-top: 1px solid #000;
+    margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Marca de agua -->
 <img src="watermark.png" class="watermark">
 
+<!-- Encabezado -->
+<div class="header">
+    <img src="logo.png" class="logo">
+    <div style="flex:1; text-align:center;">
+        <h1>FORMATO DC-3</h1>
+        <h2>CONSTANCIA DE COMPETENCIAS O HABILIDADES LABORALES</h2>
+    </div>
+</div>
+
 <div class="section">
-    <div class="title">DATOS DEL TRABAJADOR</div>
+    <div class="title">Datos del trabajador</div>
 
     <div class="row">
         <div class="col">
@@ -23,7 +116,6 @@
             <span class="label">CURP:</span>
             <span class="value">[CURP]</span>
         </div>
-
         <div class="col">
             <span class="label">Ocupación:</span>
             <span class="value">[OCUPACIÓN]</span>
@@ -37,3 +129,101 @@
         </div>
     </div>
 </div>
+
+<div class="section">
+    <div class="title">Datos de la empresa</div>
+
+    <div class="row">
+        <div class="col">
+            <span class="label">Razón social:</span>
+            <span class="value">[RAZON_SOCIAL]</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <span class="label">RFC:</span>
+            <span class="value">[RFC]</span>
+        </div>
+        <div class="col">
+            <span class="label">Actividad:</span>
+            <span class="value">[ACTIVIDAD]</span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="title">Datos del programa de capacitación</div>
+
+    <div class="row">
+        <div class="col">
+            <span class="label">Curso:</span>
+            <span class="value">[CURSO]</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <span class="label">Duración (hrs):</span>
+            <span class="value">[DURACIÓN]</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <span class="label">Periodo:</span>
+            <span class="value">[DESDE]</span> a 
+            <span class="value">[HASTA]</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <span class="label">Área temática:</span>
+            <span class="value">[AREA]</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <span class="label">Agente capacitador:</span>
+            <span class="value">[ACE]</span>
+        </div>
+        <div class="col">
+            <span class="label">Registro STPS:</span>
+            <span class="value">[STPS]</span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <p>
+        Los datos se asientan en esta constancia bajo protesta de decir verdad,
+        apercibidos de la responsabilidad en que incurre todo aquel que no se conduce con verdad.
+    </p>
+</div>
+
+<div class="signatures">
+
+    <div class="sign-box">
+        <div class="line"></div>
+        Instructor<br>
+        [ACE1]
+    </div>
+
+    <div class="sign-box">
+        <div class="line"></div>
+        Por la empresa<br>
+        [EMPRESA]
+    </div>
+
+    <div class="sign-box">
+        <div class="line"></div>
+        Por los trabajadores<br>
+        [TRABAJADORES]
+    </div>
+
+</div>
+
+</body>
+</html>
