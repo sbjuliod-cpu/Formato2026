@@ -1,119 +1,114 @@
-/* ====== CONFIGURACIÓN GENERAL ====== */
+/* ===== RESET ===== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
     margin: 40px;
-    font-size: 13px;
-    position: relative;
     color: #000;
 }
 
-/* ====== MARCA DE AGUA ====== */
-.watermark {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.08;
-    z-index: -1;
-    width: 400px;
-}
-
-/* ====== ENCABEZADO ====== */
+/* ===== ENCABEZADO ===== */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    position: relative;
 }
 
 .logo {
-    width: 120px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90px;
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
+    font-weight: bold;
 }
 
 h2 {
     font-size: 14px;
-    margin: 0;
+    margin: 5px 0 15px 0;
+    font-weight: bold;
 }
 
-/* ====== SECCIONES ====== */
+/* ===== SECCIONES ===== */
 .section {
     margin-top: 15px;
 }
 
 .title {
     font-weight: bold;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000;
     padding-bottom: 3px;
+    margin-bottom: 8px;
 }
 
-/* ====== FILAS Y COLUMNAS ====== */
+/* ===== FILAS ===== */
 .row {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 6px;
 }
 
 .col {
-    flex: 1;
-    padding-right: 10px;
+    width: 48%;
 }
 
-/* ====== TEXTOS ====== */
+/* ===== TEXTO ===== */
 .label {
     font-weight: bold;
 }
 
 .value {
     border-bottom: 1px solid #000;
-    padding-left: 5px;
     display: inline-block;
-    min-width: 100px;
+    min-width: 120px;
+    padding-left: 4px;
 }
 
-/* ====== TEXTO LEGAL ====== */
-.section p {
+/* ===== TEXTO LEGAL ===== */
+.legal {
+    margin-top: 15px;
     text-align: justify;
-    font-size: 12px;
+    font-size: 11px;
 }
 
-/* ====== FIRMAS ====== */
+/* ===== FIRMA ===== */
 .signatures {
     display: flex;
     justify-content: space-between;
-    margin-top: 60px;
-    text-align: center;
+    margin-top: 80px;
 }
 
 .sign-box {
     width: 30%;
+    text-align: center;
 }
 
-.line {
+.sign-line {
     border-top: 1px solid #000;
-    margin-top: 50px;
+    margin-bottom: 5px;
+    height: 1px;
 }
 
-/* ====== IMPRESIÓN ====== */
+/* ===== MARCA DE AGUA ===== */
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.05;
+    width: 300px;
+    z-index: -1;
+}
+
+/* ===== IMPRESIÓN ===== */
 @media print {
     body {
-        margin: 20px;
+        margin: 25px;
     }
 
     .watermark {
-        opacity: 0.05;
-        width: 350px;
-    }
-
-    h1 {
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 13px;
+        opacity: 0.04;
     }
 }
