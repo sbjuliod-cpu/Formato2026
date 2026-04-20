@@ -1,274 +1,114 @@
-/* reset */
-* {
-    box-sizing: content-box;
-    color: inherit;
-    font: inherit;
-    line-height: inherit;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    vertical-align: top;
-}
-
-/* content editable */
-*[contenteditable] {
-    border-radius: 0.25em;
-    min-width: 1em;
-    outline: 0;
-    cursor: pointer;
-}
-
-*[contenteditable]:hover,
-*[contenteditable]:focus,
-td:hover *[contenteditable],
-td:focus *[contenteditable],
-img.hover {
-    background: #DEF;
-    box-shadow: 0 0 1em 0.5em #DEF;
-}
-
-span[contenteditable] {
-    display: inline-block;
-}
-
-/* heading */
-h1 {
-    font: bold 100% sans-serif;
-    letter-spacing: 0.5em;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 1em; /* Añadido para espacio después del título */
-}
-
-/* table */
-table {
-    font-size: 75%;
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse; /* Añadido para evitar problemas de bordes en algunas situaciones */
-}
-
-th, td {
-    border: 1px solid #000; /* Añadido un borde sólido para todas las celdas */
-    padding: 0.5em;
-    position: relative;
-    text-align: left;
-}
-
-th {
-    background: #EEE;
-}
-
-/* page */
-html {
-    font: 16px/1 'Open Sans', sans-serif;
-    overflow: auto;
-    padding: 0.5in;
-    background: #999;
-    cursor: default;
-}
-
+/* ===== RESET ===== */
 body {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0.5in;
-    background: #FFF;
-    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 40px;
+    color: #000;
 }
 
-/* header */
-header {
-    margin: 0 0 3em;
-    overflow: hidden; /* Añadido para manejar el colapso del margen superior */
-}
-
-header h1 {
-    background: #27649d;
-    border-radius: 0.25em;
-    color: #FFF;
-    margin: 0;
-    padding: 0.5em 0;
-}
-
-header address {
-    float: left;
-    font-size: 75%;
-    font-style: normal;
-    line-height: 1.25;
-    margin: 0 1em 1em 0;
-}
-
-header span,
-header img {
-    display: block;
-    float: right;
-    margin: 0 0 1em 1em;
-    max-height: 25%;
-    max-width: 60%;
+/* ===== ENCABEZADO ===== */
+.header {
+    text-align: center;
     position: relative;
 }
 
-header img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-header input {
-    cursor: pointer;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    height: 100%;
+.logo {
+    position: absolute;
     left: 0;
-    opacity: 0;
-    position: absolute;
     top: 0;
-    width: 100%;
+    width: 90px;
 }
 
-/* article */
-article,
-article address,
-table.meta,
-table.inventory {
-    margin: 0 0 3em;
-    clear: both;
-}
-
-article:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-article h1 {
-    clip: rect(0 0 0 0);
-    position: absolute;
-}
-
-article address {
-    float: left;
-    font-size: 125%;
+h1 {
+    font-size: 20px;
+    margin: 0;
     font-weight: bold;
 }
 
-/* table meta & balance */
-table.meta,
-table.balance {
-    float: right;
-    width: 36%;
-}
-
-table.meta:after,
-table.balance:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* table meta */
-table.meta th {
-    width: 40%;
-}
-
-table.meta td {
-    width: 60%;
-}
-
-/* table items */
-table.inventory th {
+h2 {
+    font-size: 14px;
+    margin: 5px 0 15px 0;
     font-weight: bold;
+}
+
+/* ===== SECCIONES ===== */
+.section {
+    margin-top: 15px;
+}
+
+.title {
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+}
+
+/* ===== FILAS ===== */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.col {
+    width: 48%;
+}
+
+/* ===== TEXTO ===== */
+.label {
+    font-weight: bold;
+}
+
+.value {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 120px;
+    padding-left: 4px;
+}
+
+/* ===== TEXTO LEGAL ===== */
+.legal {
+    margin-top: 15px;
+    text-align: justify;
+    font-size: 11px;
+}
+
+/* ===== FIRMA ===== */
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.sign-box {
+    width: 30%;
     text-align: center;
 }
 
-table.inventory td {
-    text-align: right;
+.sign-line {
+    border-top: 1px solid #000;
+    margin-bottom: 5px;
+    height: 1px;
 }
 
-table { font-size: 75%; table-layout: fixed; width: 100%; }
-table { border-collapse: separate; border-spacing: 2px; }
-th, td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
-th, td { border-radius: 0.25em; border-style: solid; }
-th { background: #EEE; border-color: #BBB; }
-td { border-color: #DDD; }
-
-/* aside */
-aside h1 {
-    border: none;
-    border-width: 0 0 1px;
-    margin: 0 0 1em;
-    border-color: #999;
-    border-bottom-style: solid;
+/* ===== MARCA DE AGUA ===== */
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.05;
+    width: 300px;
+    z-index: -1;
 }
 
-/* javascript */
-.add,
-.cut {
-    display: block;
-    float: left;
-    width: 0.6em;
-    font-size: .8rem;
-    padding: 0.25em 0.5em;
-    background: #9AF;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    background-image: -moz-linear-gradient(#00ADEE 5%, #0078A5 100%);
-    background-image: -webkit-linear-gradient(#00ADEE 5%, #0078A5 100%);
-    border-radius: 0.5em;
-    border-color: #0076A3;
-    color: #FFF;
-    cursor: pointer;
-    font-weight: bold;
-    text-shadow: 0 -1px 2px rgba(0,0,0,0.333);
-    margin: -2.5em 0 0;
-}
-
-.add:hover {
-    background: #00ADEE;
-}
-
-.cut {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: -1.5em;
-}
-
-tr:hover .cut {
-    opacity: 1;
-}
-
+/* ===== IMPRESIÓN ===== */
 @media print {
-    * {
-        -webkit-print-color-adjust: exact;
-    }
-    html {
-        background: none;
-        padding: 0;
-    }
     body {
-        box-shadow: none;
-        margin: 0;
+        margin: 25px;
     }
-    span:empty {
-        display: none;
+
+    .watermark {
+        opacity: 0.04;
     }
-    .add,
-    .cut {
-        display: none;
-    }
-}
-
-@page {
-    margin: 0;
-}
-
-/* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
-.custom-line {
-    border: none;
-    border-bottom: 1px solid #000;
-    margin: 5px 0;
-}
-
-/* Estilo para el texto más pequeño */
-.small-text {
-    font-size: 60%;
 }
